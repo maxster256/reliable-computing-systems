@@ -1,0 +1,4 @@
+sqrt0.adb:26:19: medium: float overflow check might fail[#3]
+sqrt0.adb:28:12: medium: float overflow check might fail[#0]
+sqrt0.adb:37:47: medium: loop invariant might fail after first iteration, cannot prove C >= X[#2]
+sqrt0.adb:38:60: medium: loop invariant might fail after first iteration, cannot prove C < X[#1]

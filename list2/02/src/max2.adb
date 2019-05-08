@@ -1,0 +1,38 @@
+package body Max2 with SPARK_Mode is
+
+   function FindMax2 (V : Vector) return Integer
+   is
+      Max_Found : Natural := 0;
+      Second_Max_Found : Natural := 0;
+   begin
+      for I in V'Range loop
+
+         if V(I) > Max_Found then
+            -- If found number greater than the Max_Found perform substitutions
+            Second_Max_Found := Max_Found;
+            Max_Found := V(I);
+         elsif V(I) > Second_Max_Found and V(I) < Max_Found then
+            -- If found the number greater than Second_Max_Found yet smaller than
+            -- Max_Found, perform substitutions
+            Second_Max_Found := V(I);
+         end if;
+
+         -- All the numbers from V'First to I should be lesser or equal to the
+         -- Max_Found
+         pragma Loop_Invariant (for all J in V'First .. I => V(J) <= Max_Found);
+         -- There should be a maximum present in the vector of numbers at this point
+         pragma Loop_Invariant (for some J in V'First .. I => V(J) = Max_Found);
+         -- There should be a second max found in the vector of numbers
+         -- AND if there's a number greater than the Second_Max_Found, it should be greater
+         -- than all the numbers before in a vector at this point
+         -- OR Second_Max_Found must be zero and all the other numbers should be equal to Max_Found
+         pragma Loop_Invariant (((for some J in V'First .. I => V(J) = Second_Max_Found) and
+                                  (for all J in V'First .. I => (if V(J) > Second_Max_Found then (for all K in V'First .. I => V(K) <= V(J)))))
+                                or (Second_Max_Found = 0 and (for all J in V'First .. I => V(J) = Max_Found))
+                               );
+      end loop;
+
+      return Second_Max_Found;
+   end FindMax2;
+
+end Max2;

@@ -1,0 +1,45 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=core2
+A -mmacosx-version-min=10.14.5
+A -fPIC
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U max2%b		max2.adb		81eb18c2 NE OO PK
+
+U max2%s		max2.ads		c652db9f EE NE OO PK
+
+D max2.ads		20190430055201 c652db9f max2%s
+D max2.adb		20190430060939 47b9c35d max2%b
+D system.ads		20180524051735 085b6ffb system%s
+X 1 max2.ads
+1K9*Max2 19l5 19e9 2|1b14 38l5 38t9
+3A9*Vector(positive)<integer> 5r27 2|3r27
+5V13*FindMax2{integer} 5>23 7r14 8r7 9r35 12r10 17r25 2|3b13 36l8 36t16
+5a23 V{3A9} 6r13 6r40 9r24 9r53 13r23 14r28 14r39 14r46 16r23 17r18 18r31
+. 18r42 18r50 2|3b23 8r16 10r13 13r26 14r16 14r44 17r33 22r46 22r62 24r47
+. 24r63 29r49 29r65 30r49 30r69 30r112 30r128 30r136 31r76 31r92
+9i19 I{integer} 9r55
+13i18 I{integer} 14r41
+14i23 J{integer} 14r48
+16i18 I{integer} 17r20 18r52
+18i26 J{integer} 18r44
+X 2 max2.adb
+5i7 Max_Found{natural} 10r20 12r33 13m13 14r51 22r70 24r70 31r99
+6i7 Second_Max_Found{natural} 12m13 14r23 17m13 29r72 30r76 31r37 35r14
+8i11 I{integer} 10r15 13r28 14r18 14r46 17r35 22r57 24r58 29r60 30r60 30r123
+. 31r87
+22i41 J{integer} 22r64
+24i42 J{integer} 24r65
+29i44 J{integer} 29r67
+30i44 J{integer} 30r71 30r138
+30i107 K{integer} 30r130
+31i71 J{integer} 31r94
+

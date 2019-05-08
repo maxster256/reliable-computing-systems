@@ -1,0 +1,77 @@
+V "GNAT Lib v2018"
+M P W=b
+A -gnatA
+A -mtune=core2
+A -mmacosx-version-min=10.14.5
+A -fPIC
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U main%b		main.adb		b5228f08 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
+W railway%s		railway.adb		railway.ali
+Z system%s		system.ads		system.ali
+Z system.concat_6%s	s-conca6.adb		s-conca6.ali
+Z system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+
+D ada.ads		20180524051735 76789da1 ada%s
+D a-except.ads		20180524051735 291912d5 ada.exceptions%s
+D a-ioexce.ads		20180524051734 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20180524051735 119b8fb3 ada.streams%s
+D a-tags.ads		20180524051736 491b781d ada.tags%s
+D a-textio.ads		20180524051736 881db35a ada.text_io%s
+D a-unccon.ads		20180524051736 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20180524051734 5ab55268 interfaces%s
+D i-cstrea.ads		20180524051734 e53d8b8e interfaces.c_streams%s
+D main.adb		20190430055201 6a734e37 main%b
+D railway.ads		20190430055201 574c7265 railway%s
+D system.ads		20180524051735 085b6ffb system%s
+D s-conca6.ads		20180524051734 d2c72db2 system.concat_6%s
+D s-crtl.ads		20180524051734 0ebbdb71 system.crtl%s
+D s-exctab.ads		20180524051736 54135002 system.exception_table%s
+D s-ficobl.ads		20180524051736 078245e4 system.file_control_block%s
+D s-imenne.ads		20180524051735 614c06c0 system.img_enum_new%s
+D s-parame.ads		20180524051736 48ec542b system.parameters%s
+D s-secsta.ads		20180524051736 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20180524051735 a7318a92 system.soft_links%s
+D s-stache.ads		20180524051736 a37c21ec system.stack_checking%s
+D s-stalib.ads		20180524051736 09bd3940 system.standard_library%s
+D s-stoele.ads		20180524051736 2dc34a04 system.storage_elements%s
+D s-traent.ads		20180524051734 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180524051735 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20180524051736 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 10|1r6 1r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 10|1w10 1r27
+263U14*Put_Line 10|15s4 23s4 31s4 37s4 43s4 49s4 55s4
+X 10 main.adb
+4U11*Main 4b11 59l5 59t9
+5b4 Result{boolean} 11m34 12m35 13m34 14m35 19m35 20m35 21m35 22m35 27m36
+. 28m34 29m36 30m34 35m36 36m36 41m34 42m34 47m35 48m35 53m34 54m34
+X 11 railway.ads
+1K9*Railway 10|2w6 2r19 11|81e12
+4n24*Route_Left_Middle{4E9} 10|19r16 21r16
+5n24*Route_Middle_Right{4E9} 10|27r16 29r16
+6n24*Route_Right_Middle{4E9} 10|35r16 36r16
+7n24*Route_Middle_Left{4E9} 10|47r16 48r16
+8n24*Route_Enter_Left{4E9} 10|11r16 13r16 28r16 30r16
+9n24*Route_Leave_Right{4E9} 10|20r16 22r16
+10n24*Route_Enter_Right{4E9} 10|12r16 14r16
+11n24*Route_Leave_Left{4E9} 10|41r16 42r16 53r16 54r16
+22e10*Left{13E9} 10|15r36 23r36 31r36 37r36 43r36 49r36 55r36
+23e10*Middle{13E9} 10|15r71 23r71 31r71 37r71 43r71 49r71 55r71
+24e10*Right{13E9} 10|15r108 23r108 31r108 37r108 43r108 49r108 55r108
+35r4*Segment_State{20R9} 10|15r22 15r57 15r94 23r22 23r57 23r94 31r22 31r57
+. 31r94 37r22 37r57 37r94 43r22 43r57 43r94 49r22 49r57 49r94 55r22 55r57
+. 55r94
+66U14*Open_Route 10|11s4 12s4 19s4 20s4 27s4 28s4 35s4 41s4 47s4 53s4
+74U14*Move_Train 10|13s4 14s4 21s4 22s4 29s4 30s4 36s4 42s4 48s4 54s4
+

@@ -1,0 +1,23 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=core2
+A -mmacosx-version-min=10.14.5
+A -fPIC
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U mult%b		mult.adb		fa55d5ba NE OO SU
+
+D mult.adb		20190430064250 fa55d5ba mult%b
+D system.ads		20180524051735 085b6ffb system%s
+X 1 mult.adb
+1V10*Mult{natural} 1b10 1>16 1>29 4r11 28l5 28t9
+1i16 A{natural} 3r10 4r25 7r20 24r30
+1i29 B{natural} 3r24 4r29 8r20 24r34
+6i4 AB{natural} 14m10 14r16 24r48 27r11
+7i4 AA{natural} 14r21 18m7 18r17 24r38
+8i4 B1{natural} 12r10 13r10 20m7 20r13 24r43
+

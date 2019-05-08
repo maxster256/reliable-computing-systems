@@ -1,0 +1,3733 @@
+(* Module for axiomatizing type "short_short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_short_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type short_short_integer =
+  < range -128 127 >
+ 
+ function first 
+   : int =
+  ( -128 )
+ 
+ function last 
+   : int =
+  127
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = short_short_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_short_integer__ref =
+  { mutable short_short_integer__content "model_trace:" "name:" : short_short_integer }
+ 
+ function short_short_integer__ref___projection 
+   (a : short_short_integer__ref) : short_short_integer =
+  a.short_short_integer__content
+ 
+ meta "model_projection" function short_short_integer__ref___projection
+ 
+ meta "inline : no" function short_short_integer__ref___projection
+ 
+ val short_short_integer__havoc 
+   (x : short_short_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_short_integer__rep
+ use        Standard__short_short_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__short_short_integer.short_short_integer) : int =
+  (Standard__short_short_integer.short_short_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__short_short_integer.short_short_integer, 
+ predicate in_range = Standard__short_short_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type short_integer =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = short_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_integer__ref =
+  { mutable short_integer__content "model_trace:" "name:" : short_integer }
+ 
+ function short_integer__ref___projection 
+   (a : short_integer__ref) : short_integer =
+  a.short_integer__content
+ 
+ meta "model_projection" function short_integer__ref___projection
+ 
+ meta "inline : no" function short_integer__ref___projection
+ 
+ val short_integer__havoc 
+   (x : short_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_integer__rep
+ use        Standard__short_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__short_integer.short_integer) : int =
+  (Standard__short_integer.short_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__short_integer.short_integer, 
+ predicate in_range = Standard__short_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer =
+  < range -2147483648 2147483647 >
+ 
+ function first 
+   : int =
+  ( -2147483648 )
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer__ref =
+  { mutable integer__content "model_trace:" "name:" : integer }
+ 
+ function integer__ref___projection 
+   (a : integer__ref) : integer =
+  a.integer__content
+ 
+ meta "model_projection" function integer__ref___projection
+ 
+ meta "inline : no" function integer__ref___projection
+ 
+ val integer__havoc 
+   (x : integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer__rep
+ use        Standard__integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer.integer) : int =
+  (Standard__integer.integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer.integer, 
+ predicate in_range = Standard__integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type long_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = long_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_integer__ref =
+  { mutable long_integer__content "model_trace:" "name:" : long_integer }
+ 
+ function long_integer__ref___projection 
+   (a : long_integer__ref) : long_integer =
+  a.long_integer__content
+ 
+ meta "model_projection" function long_integer__ref___projection
+ 
+ meta "inline : no" function long_integer__ref___projection
+ 
+ val long_integer__havoc 
+   (x : long_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_integer__rep
+ use        Standard__long_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__long_integer.long_integer) : int =
+  (Standard__long_integer.long_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__long_integer.long_integer, 
+ predicate in_range = Standard__long_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_long_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type long_long_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = long_long_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_long_integer__ref =
+  { mutable long_long_integer__content "model_trace:" "name:" : long_long_integer }
+ 
+ function long_long_integer__ref___projection 
+   (a : long_long_integer__ref) : long_long_integer =
+  a.long_long_integer__content
+ 
+ meta "model_projection" function long_long_integer__ref___projection
+ 
+ meta "inline : no" function long_long_integer__ref___projection
+ 
+ val long_long_integer__havoc 
+   (x : long_long_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_long_integer__rep
+ use        Standard__long_long_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__long_long_integer.long_long_integer) : int =
+  (Standard__long_long_integer.long_long_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__long_long_integer.long_long_integer, 
+ predicate in_range = Standard__long_long_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "natural", created in Gnat2Why.Types.Translate_Type *)
+module Standard__natural
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type natural =
+  < range 0 2147483647 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = natural, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type natural__ref =
+  { mutable natural__content "model_trace:" "name:" : natural }
+ 
+ function natural__ref___projection 
+   (a : natural__ref) : natural =
+  a.natural__content
+ 
+ meta "model_projection" function natural__ref___projection
+ 
+ meta "inline : no" function natural__ref___projection
+ 
+ val natural__havoc 
+   (x : natural__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "natural", created in Gnat2Why.Types.Translate_Type *)
+module Standard__natural__rep
+ use        Standard__natural
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__natural.natural) : int =
+  (Standard__natural.natural'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__natural.natural, 
+ predicate in_range = Standard__natural.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "positive", created in Gnat2Why.Types.Translate_Type *)
+module Standard__positive
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type positive =
+  < range 1 2147483647 >
+ 
+ function first 
+   : int =
+  1
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = positive, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type positive__ref =
+  { mutable positive__content "model_trace:" "name:" : positive }
+ 
+ function positive__ref___projection 
+   (a : positive__ref) : positive =
+  a.positive__content
+ 
+ meta "model_projection" function positive__ref___projection
+ 
+ meta "inline : no" function positive__ref___projection
+ 
+ val positive__havoc 
+   (x : positive__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "positive", created in Gnat2Why.Types.Translate_Type *)
+module Standard__positive__rep
+ use        Standard__positive
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__positive.positive) : int =
+  (Standard__positive.positive'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__positive.positive, 
+ predicate in_range = Standard__positive.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "short_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+
+ type short_float 
+ 
+ function first 
+   : Float32.t =
+  (Float32.neg (340282346638528859811704183484516925440.0:Float32.t))
+ 
+ function last 
+   : Float32.t =
+  (340282346638528859811704183484516925440.0:Float32.t)
+ 
+ predicate in_range 
+   (x : Float32.t)  =
+  (Float32.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float32 with
+ type t = short_float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_float__ref =
+  { mutable short_float__content "model_trace:" "name:" : short_float }
+ 
+ function short_float__ref___projection 
+   (a : short_float__ref) : short_float =
+  a.short_float__content
+ 
+ meta "model_projection" function short_float__ref___projection
+ 
+ meta "inline : no" function short_float__ref___projection
+ 
+ val short_float__havoc 
+   (x : short_float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_float__rep
+ use        Standard__short_float
+ use        "_gnatprove_standard".Float32
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float32 with
+ type t = Standard__short_float.short_float, 
+ predicate in_range = Standard__short_float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+
+ type float 
+ 
+ function first 
+   : Float32.t =
+  (Float32.neg (340282346638528859811704183484516925440.0:Float32.t))
+ 
+ function last 
+   : Float32.t =
+  (340282346638528859811704183484516925440.0:Float32.t)
+ 
+ predicate in_range 
+   (x : Float32.t)  =
+  (Float32.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float32 with
+ type t = float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type float__ref =
+  { mutable float__content "model_trace:" "name:" : float }
+ 
+ function float__ref___projection 
+   (a : float__ref) : float =
+  a.float__content
+ 
+ meta "model_projection" function float__ref___projection
+ 
+ meta "inline : no" function float__ref___projection
+ 
+ val float__havoc 
+   (x : float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__float__rep
+ use        Standard__float
+ use        "_gnatprove_standard".Float32
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float32 with
+ type t = Standard__float.float, 
+ predicate in_range = Standard__float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float64
+
+ type long_float 
+ 
+ function first 
+   : Float64.t =
+  (Float64.neg (179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0:Float64.t))
+ 
+ function last 
+   : Float64.t =
+  (179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0:Float64.t)
+ 
+ predicate in_range 
+   (x : Float64.t)  =
+  (Float64.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float64 with
+ type t = long_float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_float__ref =
+  { mutable long_float__content "model_trace:" "name:" : long_float }
+ 
+ function long_float__ref___projection 
+   (a : long_float__ref) : long_float =
+  a.long_float__content
+ 
+ meta "model_projection" function long_float__ref___projection
+ 
+ meta "inline : no" function long_float__ref___projection
+ 
+ val long_float__havoc 
+   (x : long_float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_float__rep
+ use        Standard__long_float
+ use        "_gnatprove_standard".Float64
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float64 with
+ type t = Standard__long_float.long_float, 
+ predicate in_range = Standard__long_float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  255
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type character__ref =
+  { mutable character__content "model_trace:" "name:" : character }
+ 
+ function character__ref___projection 
+   (a : character__ref) : character =
+  a.character__content
+ 
+ meta "model_projection" function character__ref___projection
+ 
+ meta "inline : no" function character__ref___projection
+ 
+ val character__havoc 
+   (x : character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__character__rep
+ use        Standard__character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__character.character, 
+ predicate in_range = Standard__character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type wide_character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  65535
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = wide_character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type wide_character__ref =
+  { mutable wide_character__content "model_trace:" "name:" : wide_character }
+ 
+ function wide_character__ref___projection 
+   (a : wide_character__ref) : wide_character =
+  a.wide_character__content
+ 
+ meta "model_projection" function wide_character__ref___projection
+ 
+ meta "inline : no" function wide_character__ref___projection
+ 
+ val wide_character__havoc 
+   (x : wide_character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_character__rep
+ use        Standard__wide_character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__wide_character.wide_character, 
+ predicate in_range = Standard__wide_character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "wide_wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type wide_wide_character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = wide_wide_character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type wide_wide_character__ref =
+  { mutable wide_wide_character__content "model_trace:" "name:" : wide_wide_character }
+ 
+ function wide_wide_character__ref___projection 
+   (a : wide_wide_character__ref) : wide_wide_character =
+  a.wide_wide_character__content
+ 
+ meta "model_projection" function wide_wide_character__ref___projection
+ 
+ meta "inline : no" function wide_wide_character__ref___projection
+ 
+ val wide_wide_character__havoc 
+   (x : wide_wide_character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "wide_wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_character__rep
+ use        Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__wide_wide_character.wide_wide_character, 
+ predicate in_range = Standard__wide_wide_character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing the array theory associated to type "string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character
+ use        Standard__character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__character.character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_91   : int.
+   (if (( (a__first <= temp___idx_91) /\ (temp___idx_91 <= a__last) )) then (
+    ((Standard__character__rep.to_rep (get a temp___idx_91)) = (Standard__character__rep.to_rep (get b ((b__first - a__first) + temp___idx_91))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_91   : int.
+    (if (( (a__first <= temp___idx_91) /\ (temp___idx_91 <= a__last) )) then (
+     ((Standard__character__rep.to_rep (get a temp___idx_91)) = (Standard__character__rep.to_rep (get b ((b__first - a__first) + temp___idx_91))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__character.component_type, 
+ type map = Array__Int__Standard__character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character__rep
+ use        Array__Int__Standard__character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__character.component_type, 
+ function to_rep = Standard__character__rep.to_rep, 
+ type map = Array__Int__Standard__character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__character.get, 
+ function bool_eq = Array__Int__Standard__character.bool_eq
+
+end
+
+(* Module for axiomatizing type "string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Main
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__character
+ use        Array__Int__Standard__character
+ use        Standard__integer__rep
+
+ type component_type =
+  Standard__character.character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__character.map, 
+ function array_bool_eq = Array__Int__Standard__character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ function to_string 
+   (x : Main.__image) : string
+ 
+ function from_string 
+   (x : string) : Main.__image
+ 
+ type string__ref =
+  { mutable string__content "model_trace:" "name:" : string }
+ 
+ function string__ref___projection 
+   (a : string__ref) : string =
+  a.string__content
+ 
+ meta "model_projection" function string__ref___projection
+ 
+ meta "inline : no" function string__ref___projection
+ 
+ val string__havoc 
+   (x : string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing the array theory associated to type "wide_string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character
+ use        Standard__wide_character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__wide_character.wide_character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_98   : int.
+   (if (( (a__first <= temp___idx_98) /\ (temp___idx_98 <= a__last) )) then (
+    ((Standard__wide_character__rep.to_rep (get a temp___idx_98)) = (Standard__wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_98))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_98   : int.
+    (if (( (a__first <= temp___idx_98) /\ (temp___idx_98 <= a__last) )) then (
+     ((Standard__wide_character__rep.to_rep (get a temp___idx_98)) = (Standard__wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_98))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "wide_string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__wide_character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__wide_character.component_type, 
+ type map = Array__Int__Standard__wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "wide_string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__wide_character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character__rep
+ use        Array__Int__Standard__wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__wide_character.component_type, 
+ function to_rep = Standard__wide_character__rep.to_rep, 
+ type map = Array__Int__Standard__wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_character.get, 
+ function bool_eq = Array__Int__Standard__wide_character.bool_eq
+
+end
+
+(* Module for axiomatizing type "wide_string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__wide_character
+ use        Standard__integer__rep
+ use        Array__Int__Standard__wide_character
+
+ type component_type =
+  Standard__wide_character.wide_character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__wide_character.map, 
+ function array_bool_eq = Array__Int__Standard__wide_character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type wide_string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type wide_string__ref =
+  { mutable wide_string__content "model_trace:" "name:" : wide_string }
+ 
+ function wide_string__ref___projection 
+   (a : wide_string__ref) : wide_string =
+  a.wide_string__content
+ 
+ meta "model_projection" function wide_string__ref___projection
+ 
+ meta "inline : no" function wide_string__ref___projection
+ 
+ val wide_string__havoc 
+   (x : wide_string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character
+ use        Standard__wide_wide_character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__wide_wide_character.wide_wide_character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_105   : int.
+   (if (( (a__first <= temp___idx_105) /\ (temp___idx_105 <= a__last) )) then (
+    ((Standard__wide_wide_character__rep.to_rep (get a temp___idx_105)) = (Standard__wide_wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_105))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_105   : int.
+    (if (( (a__first <= temp___idx_105) /\ (temp___idx_105 <= a__last) )) then (
+     ((Standard__wide_wide_character__rep.to_rep (get a temp___idx_105)) = (Standard__wide_wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_105))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__wide_wide_character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__wide_wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__wide_wide_character.component_type, 
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_wide_character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__wide_wide_character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character__rep
+ use        Array__Int__Standard__wide_wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__wide_wide_character.component_type, 
+ function to_rep = Standard__wide_wide_character__rep.to_rep, 
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_wide_character.get, 
+ function bool_eq = Array__Int__Standard__wide_wide_character.bool_eq
+
+end
+
+(* Module for axiomatizing type "wide_wide_string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__wide_wide_character
+ use        Standard__integer__rep
+ use        Array__Int__Standard__wide_wide_character
+
+ type component_type =
+  Standard__wide_wide_character.wide_wide_character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ function array_bool_eq = Array__Int__Standard__wide_wide_character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type wide_wide_string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type wide_wide_string__ref =
+  { mutable wide_wide_string__content "model_trace:" "name:" : wide_wide_string }
+ 
+ function wide_wide_string__ref___projection 
+   (a : wide_wide_string__ref) : wide_wide_string =
+  a.wide_wide_string__content
+ 
+ meta "model_projection" function wide_wide_string__ref___projection
+ 
+ meta "inline : no" function wide_wide_string__ref___projection
+ 
+ val wide_wide_string__havoc 
+   (x : wide_wide_string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for fixed-point operation for type at system.ads:1, created in Why.Gen.Scalars.Create_Fixed_Point_Theory_If_Needed *)
+module Fixed_Point__1_1000000000
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ function num_small 
+   : int =
+  1
+ 
+ function den_small 
+   : int =
+  1000000000
+ 
+ clone export "ada__model".Fixed_Point_Rep with
+ function num_small = num_small, 
+ function den_small = den_small
+
+end
+
+(* Module for axiomatizing type "duration", created in Gnat2Why.Types.Translate_Type *)
+module Standard__duration
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Main
+
+ type duration 
+ 
+ function num_small 
+   : Main.__fixed =
+  1
+ 
+ function den_small 
+   : Main.__fixed =
+  1000000000
+ 
+ function first 
+   : Main.__fixed =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : Main.__fixed =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : Main.__fixed)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Fixed_Point with
+ type t = duration, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type duration__ref =
+  { mutable duration__content "model_trace:" "name:" : duration }
+ 
+ function duration__ref___projection 
+   (a : duration__ref) : duration =
+  a.duration__content
+ 
+ meta "model_projection" function duration__ref___projection
+ 
+ meta "inline : no" function duration__ref___projection
+ 
+ val duration__havoc 
+   (x : duration__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "integer_8", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_8
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_8 =
+  < range -128 127 >
+ 
+ function first 
+   : int =
+  ( -128 )
+ 
+ function last 
+   : int =
+  127
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_8, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_8__ref =
+  { mutable integer_8__content "model_trace:" "name:" : integer_8 }
+ 
+ function integer_8__ref___projection 
+   (a : integer_8__ref) : integer_8 =
+  a.integer_8__content
+ 
+ meta "model_projection" function integer_8__ref___projection
+ 
+ meta "inline : no" function integer_8__ref___projection
+ 
+ val integer_8__havoc 
+   (x : integer_8__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_8", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_8__rep
+ use        Standard__integer_8
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_8.integer_8) : int =
+  (Standard__integer_8.integer_8'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_8.integer_8, 
+ predicate in_range = Standard__integer_8.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_16", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_16
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_16 =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_16, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_16__ref =
+  { mutable integer_16__content "model_trace:" "name:" : integer_16 }
+ 
+ function integer_16__ref___projection 
+   (a : integer_16__ref) : integer_16 =
+  a.integer_16__content
+ 
+ meta "model_projection" function integer_16__ref___projection
+ 
+ meta "inline : no" function integer_16__ref___projection
+ 
+ val integer_16__havoc 
+   (x : integer_16__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_16", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_16__rep
+ use        Standard__integer_16
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_16.integer_16) : int =
+  (Standard__integer_16.integer_16'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_16.integer_16, 
+ predicate in_range = Standard__integer_16.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_32", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_32
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_32 =
+  < range -2147483648 2147483647 >
+ 
+ function first 
+   : int =
+  ( -2147483648 )
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_32, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_32__ref =
+  { mutable integer_32__content "model_trace:" "name:" : integer_32 }
+ 
+ function integer_32__ref___projection 
+   (a : integer_32__ref) : integer_32 =
+  a.integer_32__content
+ 
+ meta "model_projection" function integer_32__ref___projection
+ 
+ meta "inline : no" function integer_32__ref___projection
+ 
+ val integer_32__havoc 
+   (x : integer_32__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_32", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_32__rep
+ use        Standard__integer_32
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_32.integer_32) : int =
+  (Standard__integer_32.integer_32'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_32.integer_32, 
+ predicate in_range = Standard__integer_32.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_64", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_64
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_64 =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_64, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_64__ref =
+  { mutable integer_64__content "model_trace:" "name:" : integer_64 }
+ 
+ function integer_64__ref___projection 
+   (a : integer_64__ref) : integer_64 =
+  a.integer_64__content
+ 
+ meta "model_projection" function integer_64__ref___projection
+ 
+ meta "inline : no" function integer_64__ref___projection
+ 
+ val integer_64__havoc 
+   (x : integer_64__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_64", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_64__rep
+ use        Standard__integer_64
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_64.integer_64) : int =
+  (Standard__integer_64.integer_64'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_64.integer_64, 
+ predicate in_range = Standard__integer_64.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "universal_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__universal_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type universal_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = universal_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type universal_integer__ref =
+  { mutable universal_integer__content "model_trace:" "name:" : universal_integer }
+ 
+ function universal_integer__ref___projection 
+   (a : universal_integer__ref) : universal_integer =
+  a.universal_integer__content
+ 
+ meta "model_projection" function universal_integer__ref___projection
+ 
+ meta "inline : no" function universal_integer__ref___projection
+ 
+ val universal_integer__havoc 
+   (x : universal_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "universal_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__universal_integer__rep
+ use        Standard__universal_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__universal_integer.universal_integer) : int =
+  (Standard__universal_integer.universal_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__universal_integer.universal_integer, 
+ predicate in_range = Standard__universal_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing the array theory associated to type "vector" defined at max2.ads:3, created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__positive
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__positive
+ use        Standard__positive__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__positive.positive
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_154   : int.
+   (if (( (a__first <= temp___idx_154) /\ (temp___idx_154 <= a__last) )) then (
+    ((Standard__positive__rep.to_rep (get a temp___idx_154)) = (Standard__positive__rep.to_rep (get b ((b__first - a__first) + temp___idx_154))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_154   : int.
+    (if (( (a__first <= temp___idx_154) /\ (temp___idx_154 <= a__last) )) then (
+     ((Standard__positive__rep.to_rep (get a temp___idx_154)) = (Standard__positive__rep.to_rep (get b ((b__first - a__first) + temp___idx_154))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "vector" defined at max2.ads:3, created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__positive__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__positive
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__positive.component_type, 
+ type map = Array__Int__Standard__positive.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__positive.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "vector" defined at max2.ads:3, created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__positive_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__positive__rep
+ use        Array__Int__Standard__positive
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__positive.component_type, 
+ function to_rep = Standard__positive__rep.to_rep, 
+ type map = Array__Int__Standard__positive.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__positive.get, 
+ function bool_eq = Array__Int__Standard__positive.bool_eq
+
+end
+
+(* Module for axiomatizing type "vector" defined at max2.ads:3, created in Gnat2Why.Types.Translate_Type *)
+module Max2__vector
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__integer__rep
+ use        Array__Int__Standard__positive
+
+ type component_type =
+  Standard__positive.positive
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__positive.map, 
+ function array_bool_eq = Array__Int__Standard__positive.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__integer.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type vector =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type vector__ref =
+  { mutable vector__content "model_trace:" "name:" : vector }
+ 
+ function vector__ref___projection 
+   (a : vector__ref) : vector =
+  a.vector__content
+ 
+ meta "model_projection" function vector__ref___projection
+ 
+ meta "inline : no" function vector__ref___projection
+ 
+ val vector__havoc 
+   (x : vector__ref) : unit
+  writes {x}
+
+end
+
+(* Module for defining the constant "v" defined at max2.ads:5, created in Gnat2Why.Decls.Translate_Constant *)
+module Max2__findmax2__v
+ use import "_gnatprove_standard".Main
+ use        Max2__vector
+
+ function v #"max2.ads" 5 0 0#"model_projected" "model_trace:2576" "name:V" 
+   : Max2__vector.vector
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "v" defined at max2.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Max2__findmax2__v___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for axiomatizing type "T6s" defined at max2.ads:9, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L5s__T6s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t6s =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t6s, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t6s__ref =
+  { mutable t6s__content "model_trace:" "name:" : t6s }
+ 
+ function t6s__ref___projection 
+   (a : t6s__ref) : t6s =
+  a.t6s__content
+ 
+ meta "model_projection" function t6s__ref___projection
+ 
+ meta "inline : no" function t6s__ref___projection
+ 
+ val t6s__havoc 
+   (x : t6s__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T8s" defined at max2.ads:13, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L7s__T8s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t8s =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t8s, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t8s__ref =
+  { mutable t8s__content "model_trace:" "name:" : t8s }
+ 
+ function t8s__ref___projection 
+   (a : t8s__ref) : t8s =
+  a.t8s__content
+ 
+ meta "model_projection" function t8s__ref___projection
+ 
+ meta "inline : no" function t8s__ref___projection
+ 
+ val t8s__havoc 
+   (x : t8s__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T10s" defined at max2.ads:14, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L7s__L9s__T10s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t10s =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t10s, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t10s__ref =
+  { mutable t10s__content "model_trace:" "name:" : t10s }
+ 
+ function t10s__ref___projection 
+   (a : t10s__ref) : t10s =
+  a.t10s__content
+ 
+ meta "model_projection" function t10s__ref___projection
+ 
+ meta "inline : no" function t10s__ref___projection
+ 
+ val t10s__havoc 
+   (x : t10s__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T12s" defined at max2.ads:16, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L11s__T12s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t12s =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t12s, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t12s__ref =
+  { mutable t12s__content "model_trace:" "name:" : t12s }
+ 
+ function t12s__ref___projection 
+   (a : t12s__ref) : t12s =
+  a.t12s__content
+ 
+ meta "model_projection" function t12s__ref___projection
+ 
+ meta "inline : no" function t12s__ref___projection
+ 
+ val t12s__havoc 
+   (x : t12s__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T14s" defined at max2.ads:18, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L11s__L13s__T14s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t14s =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t14s, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t14s__ref =
+  { mutable t14s__content "model_trace:" "name:" : t14s }
+ 
+ function t14s__ref___projection 
+   (a : t14s__ref) : t14s =
+  a.t14s__content
+ 
+ meta "model_projection" function t14s__ref___projection
+ 
+ meta "inline : no" function t14s__ref___projection
+ 
+ val t14s__havoc 
+   (x : t14s__ref) : unit
+  writes {x}
+
+end
+
+(* Module for possibly declaring a logic function for "findmax2" defined at max2.ads:5, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Max2__findmax2
+ use import "_gnatprove_standard".Main
+ use        Max2__vector
+
+ function findmax2 
+   (v : Max2__vector.vector) : int
+ 
+ predicate findmax2__function_guard 
+   (result : int) (v : Max2__vector.vector) 
+
+end
+
+(* Module for axiomatizing type "TS1bP1" defined at max2.adb:3, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__TS1bP1
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type tS1bP1 =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = tS1bP1, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type tS1bP1__ref =
+  { mutable tS1bP1__content "model_trace:" "name:" : tS1bP1 }
+ 
+ function tS1bP1__ref___projection 
+   (a : tS1bP1__ref) : tS1bP1 =
+  a.tS1bP1__content
+ 
+ meta "model_projection" function tS1bP1__ref___projection
+ 
+ meta "inline : no" function tS1bP1__ref___projection
+ 
+ val tS1bP1__havoc 
+   (x : tS1bP1__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "S1b" defined at max2.adb:3, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__S1b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__integer__rep
+ use        Array__Int__Standard__positive
+ use        Max2__findmax2__TS1bP1
+
+ type component_type =
+  Standard__positive.positive
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__positive.map, 
+ function array_bool_eq = Array__Int__Standard__positive.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Max2__findmax2__TS1bP1.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type s1b =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type s1b__ref =
+  { mutable s1b__content "model_trace:" "name:" : s1b }
+ 
+ function s1b__ref___projection 
+   (a : s1b__ref) : s1b =
+  a.s1b__content
+ 
+ meta "model_projection" function s1b__ref___projection
+ 
+ meta "inline : no" function s1b__ref___projection
+ 
+ val s1b__havoc 
+   (x : s1b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T2b" defined at max2.adb:8, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__T2b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t2b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t2b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t2b__ref =
+  { mutable t2b__content "model_trace:" "name:" : t2b }
+ 
+ function t2b__ref___projection 
+   (a : t2b__ref) : t2b =
+  a.t2b__content
+ 
+ meta "model_projection" function t2b__ref___projection
+ 
+ meta "inline : no" function t2b__ref___projection
+ 
+ val t2b__havoc 
+   (x : t2b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T6b" defined at max2.adb:22, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L5b__T6b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t6b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t6b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t6b__ref =
+  { mutable t6b__content "model_trace:" "name:" : t6b }
+ 
+ function t6b__ref___projection 
+   (a : t6b__ref) : t6b =
+  a.t6b__content
+ 
+ meta "model_projection" function t6b__ref___projection
+ 
+ meta "inline : no" function t6b__ref___projection
+ 
+ val t6b__havoc 
+   (x : t6b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T4b" defined at max2.adb:22, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L3b__T4b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t4b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t4b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t4b__ref =
+  { mutable t4b__content "model_trace:" "name:" : t4b }
+ 
+ function t4b__ref___projection 
+   (a : t4b__ref) : t4b =
+  a.t4b__content
+ 
+ meta "model_projection" function t4b__ref___projection
+ 
+ meta "inline : no" function t4b__ref___projection
+ 
+ val t4b__havoc 
+   (x : t4b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T10b" defined at max2.adb:24, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L9b__T10b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t10b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t10b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t10b__ref =
+  { mutable t10b__content "model_trace:" "name:" : t10b }
+ 
+ function t10b__ref___projection 
+   (a : t10b__ref) : t10b =
+  a.t10b__content
+ 
+ meta "model_projection" function t10b__ref___projection
+ 
+ meta "inline : no" function t10b__ref___projection
+ 
+ val t10b__havoc 
+   (x : t10b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T8b" defined at max2.adb:24, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L7b__T8b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t8b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t8b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t8b__ref =
+  { mutable t8b__content "model_trace:" "name:" : t8b }
+ 
+ function t8b__ref___projection 
+   (a : t8b__ref) : t8b =
+  a.t8b__content
+ 
+ meta "model_projection" function t8b__ref___projection
+ 
+ meta "inline : no" function t8b__ref___projection
+ 
+ val t8b__havoc 
+   (x : t8b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T20b" defined at max2.adb:29, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L19b__T20b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t20b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t20b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t20b__ref =
+  { mutable t20b__content "model_trace:" "name:" : t20b }
+ 
+ function t20b__ref___projection 
+   (a : t20b__ref) : t20b =
+  a.t20b__content
+ 
+ meta "model_projection" function t20b__ref___projection
+ 
+ meta "inline : no" function t20b__ref___projection
+ 
+ val t20b__havoc 
+   (x : t20b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T12b" defined at max2.adb:29, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L11b__T12b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t12b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t12b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t12b__ref =
+  { mutable t12b__content "model_trace:" "name:" : t12b }
+ 
+ function t12b__ref___projection 
+   (a : t12b__ref) : t12b =
+  a.t12b__content
+ 
+ meta "model_projection" function t12b__ref___projection
+ 
+ meta "inline : no" function t12b__ref___projection
+ 
+ val t12b__havoc 
+   (x : t12b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T22b" defined at max2.adb:30, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L21b__T22b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t22b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t22b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t22b__ref =
+  { mutable t22b__content "model_trace:" "name:" : t22b }
+ 
+ function t22b__ref___projection 
+   (a : t22b__ref) : t22b =
+  a.t22b__content
+ 
+ meta "model_projection" function t22b__ref___projection
+ 
+ meta "inline : no" function t22b__ref___projection
+ 
+ val t22b__havoc 
+   (x : t22b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T14b" defined at max2.adb:30, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L13b__T14b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t14b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t14b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t14b__ref =
+  { mutable t14b__content "model_trace:" "name:" : t14b }
+ 
+ function t14b__ref___projection 
+   (a : t14b__ref) : t14b =
+  a.t14b__content
+ 
+ meta "model_projection" function t14b__ref___projection
+ 
+ meta "inline : no" function t14b__ref___projection
+ 
+ val t14b__havoc 
+   (x : t14b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T24b" defined at max2.adb:30, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L21b__L23b__T24b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t24b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t24b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t24b__ref =
+  { mutable t24b__content "model_trace:" "name:" : t24b }
+ 
+ function t24b__ref___projection 
+   (a : t24b__ref) : t24b =
+  a.t24b__content
+ 
+ meta "model_projection" function t24b__ref___projection
+ 
+ meta "inline : no" function t24b__ref___projection
+ 
+ val t24b__havoc 
+   (x : t24b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T16b" defined at max2.adb:30, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L13b__L15b__T16b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t16b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t16b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t16b__ref =
+  { mutable t16b__content "model_trace:" "name:" : t16b }
+ 
+ function t16b__ref___projection 
+   (a : t16b__ref) : t16b =
+  a.t16b__content
+ 
+ meta "model_projection" function t16b__ref___projection
+ 
+ meta "inline : no" function t16b__ref___projection
+ 
+ val t16b__havoc 
+   (x : t16b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T26b" defined at max2.adb:31, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L25b__T26b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t26b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t26b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t26b__ref =
+  { mutable t26b__content "model_trace:" "name:" : t26b }
+ 
+ function t26b__ref___projection 
+   (a : t26b__ref) : t26b =
+  a.t26b__content
+ 
+ meta "model_projection" function t26b__ref___projection
+ 
+ meta "inline : no" function t26b__ref___projection
+ 
+ val t26b__havoc 
+   (x : t26b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T18b" defined at max2.adb:31, created in Gnat2Why.Types.Translate_Type *)
+module Max2__findmax2__L_1__L17b__T18b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__integer__rep
+
+ type t18b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t18b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t18b__ref =
+  { mutable t18b__content "model_trace:" "name:" : t18b }
+ 
+ function t18b__ref___projection 
+   (a : t18b__ref) : t18b =
+  a.t18b__content
+ 
+ meta "model_projection" function t18b__ref___projection
+ 
+ meta "inline : no" function t18b__ref___projection
+ 
+ val t18b__havoc 
+   (x : t18b__ref) : unit
+  writes {x}
+
+end
+(* Module for defining a ref holding the value of variable "max_found" defined at max2.adb:5, created in Gnat2Why.Decls.Translate_Variable *)
+module Max2__findmax2__max_found
+ use import "_gnatprove_standard".Main
+
+ val max_found #"max2.adb" 5 0 0#"model_projected" "model_trace:2326" "name:Max_Found"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "max_found" defined at max2.adb:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Max2__findmax2__max_found___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "second_max_found" defined at max2.adb:6, created in Gnat2Why.Decls.Translate_Variable *)
+module Max2__findmax2__second_max_found
+ use import "_gnatprove_standard".Main
+
+ val second_max_found #"max2.adb" 6 0 0#"model_projected" "model_trace:2336" "name:Second_Max_Found"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "second_max_found" defined at max2.adb:6, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Max2__findmax2__second_max_found___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "i" defined at max2.adb:8, created in Gnat2Why.Decls.Translate_Variable *)
+module Max2__findmax2__L_1__i
+ use import "_gnatprove_standard".Main
+
+ val i #"max2.adb" 8 0 0#"model_projected" "model_trace:2349" "name:I"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "i" defined at max2.adb:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Max2__findmax2__L_1__i___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+(* Module giving axioms for type "short_short_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_short_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__short_short_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_4 : int) (temp___is_init_0 : bool) (temp___skip_constant_1 : bool) (temp___do_toplevel_2 : bool) (temp___do_typ_inv_3 : bool)  =
+  (if (( temp___is_init_0 \/ (Standard__short_short_integer.first <= Standard__short_short_integer.last) )) then (
+   (Standard__short_short_integer.dynamic_property Standard__short_short_integer.first Standard__short_short_integer.last temp___expr_4)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_5 : int) (temp___skip_top_level_6 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "short_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__short_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_11 : int) (temp___is_init_7 : bool) (temp___skip_constant_8 : bool) (temp___do_toplevel_9 : bool) (temp___do_typ_inv_10 : bool)  =
+  (if (( temp___is_init_7 \/ (Standard__short_integer.first <= Standard__short_integer.last) )) then (
+   (Standard__short_integer.dynamic_property Standard__short_integer.first Standard__short_integer.last temp___expr_11)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_12 : int) (temp___skip_top_level_13 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_18 : int) (temp___is_init_14 : bool) (temp___skip_constant_15 : bool) (temp___do_toplevel_16 : bool) (temp___do_typ_inv_17 : bool)  =
+  (if (( temp___is_init_14 \/ (Standard__integer.first <= Standard__integer.last) )) then (
+   (Standard__integer.dynamic_property Standard__integer.first Standard__integer.last temp___expr_18)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_19 : int) (temp___skip_top_level_20 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__long_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_25 : int) (temp___is_init_21 : bool) (temp___skip_constant_22 : bool) (temp___do_toplevel_23 : bool) (temp___do_typ_inv_24 : bool)  =
+  (if (( temp___is_init_21 \/ (Standard__long_integer.first <= Standard__long_integer.last) )) then (
+   (Standard__long_integer.dynamic_property Standard__long_integer.first Standard__long_integer.last temp___expr_25)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_26 : int) (temp___skip_top_level_27 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_long_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_long_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__long_long_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_32 : int) (temp___is_init_28 : bool) (temp___skip_constant_29 : bool) (temp___do_toplevel_30 : bool) (temp___do_typ_inv_31 : bool)  =
+  (if (( temp___is_init_28 \/ (Standard__long_long_integer.first <= Standard__long_long_integer.last) )) then (
+   (Standard__long_long_integer.dynamic_property Standard__long_long_integer.first Standard__long_long_integer.last temp___expr_32)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_33 : int) (temp___skip_top_level_34 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "natural", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__natural___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__natural
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_39 : int) (temp___is_init_35 : bool) (temp___skip_constant_36 : bool) (temp___do_toplevel_37 : bool) (temp___do_typ_inv_38 : bool)  =
+  (if (( temp___is_init_35 \/ (Standard__natural.first <= Standard__natural.last) )) then (
+   (Standard__natural.dynamic_property Standard__natural.first Standard__natural.last temp___expr_39)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_40 : int) (temp___skip_top_level_41 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "positive", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__positive___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__positive
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_46 : int) (temp___is_init_42 : bool) (temp___skip_constant_43 : bool) (temp___do_toplevel_44 : bool) (temp___do_typ_inv_45 : bool)  =
+  (if (( temp___is_init_42 \/ (Standard__positive.first <= Standard__positive.last) )) then (
+   (Standard__positive.dynamic_property Standard__positive.first Standard__positive.last temp___expr_46)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_47 : int) (temp___skip_top_level_48 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "short_float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+ use        Standard__short_float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_53 : Float32.t) (temp___is_init_49 : bool) (temp___skip_constant_50 : bool) (temp___do_toplevel_51 : bool) (temp___do_typ_inv_52 : bool)  =
+  (if (( temp___is_init_49 \/ (Float32.le Standard__short_float.first Standard__short_float.last) )) then (
+   (Standard__short_float.dynamic_property Standard__short_float.first Standard__short_float.last temp___expr_53)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_54 : Float32.t) (temp___skip_top_level_55 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+ use        Standard__float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_60 : Float32.t) (temp___is_init_56 : bool) (temp___skip_constant_57 : bool) (temp___do_toplevel_58 : bool) (temp___do_typ_inv_59 : bool)  =
+  (if (( temp___is_init_56 \/ (Float32.le Standard__float.first Standard__float.last) )) then (
+   (Standard__float.dynamic_property Standard__float.first Standard__float.last temp___expr_60)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_61 : Float32.t) (temp___skip_top_level_62 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float64
+ use        Standard__long_float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_67 : Float64.t) (temp___is_init_63 : bool) (temp___skip_constant_64 : bool) (temp___do_toplevel_65 : bool) (temp___do_typ_inv_66 : bool)  =
+  (if (( temp___is_init_63 \/ (Float64.le Standard__long_float.first Standard__long_float.last) )) then (
+   (Standard__long_float.dynamic_property Standard__long_float.first Standard__long_float.last temp___expr_67)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_68 : Float64.t) (temp___skip_top_level_69 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_74 : int) (temp___is_init_70 : bool) (temp___skip_constant_71 : bool) (temp___do_toplevel_72 : bool) (temp___do_typ_inv_73 : bool)  =
+  (if (( temp___is_init_70 \/ (Standard__character.first <= Standard__character.last) )) then (
+   (Standard__character.dynamic_property Standard__character.first Standard__character.last temp___expr_74)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_75 : int) (temp___skip_top_level_76 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "wide_character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_81 : int) (temp___is_init_77 : bool) (temp___skip_constant_78 : bool) (temp___do_toplevel_79 : bool) (temp___do_typ_inv_80 : bool)  =
+  (if (( temp___is_init_77 \/ (Standard__wide_character.first <= Standard__wide_character.last) )) then (
+   (Standard__wide_character.dynamic_property Standard__wide_character.first Standard__wide_character.last temp___expr_81)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_82 : int) (temp___skip_top_level_83 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "wide_wide_character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_wide_character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_88 : int) (temp___is_init_84 : bool) (temp___skip_constant_85 : bool) (temp___do_toplevel_86 : bool) (temp___do_typ_inv_87 : bool)  =
+  (if (( temp___is_init_84 \/ (Standard__wide_wide_character.first <= Standard__wide_wide_character.last) )) then (
+   (Standard__wide_wide_character.dynamic_property Standard__wide_wide_character.first Standard__wide_wide_character.last temp___expr_88)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_89 : int) (temp___skip_top_level_90 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__string
+ use        Standard__positive
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_96 : Standard__string.string) (temp___is_init_92 : bool) (temp___skip_constant_93 : bool) (temp___do_toplevel_94 : bool) (temp___do_typ_inv_95 : bool)  =
+  (if (temp___skip_constant_93) then (
+   true) else (
+   (Standard__string.dynamic_property Standard__positive.first Standard__positive.last (Standard__string.first temp___expr_96) (Standard__string.last temp___expr_96))))
+
+end
+
+(* Module giving axioms for type "wide_string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__positive
+ use        Standard__wide_string
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_103 : Standard__wide_string.wide_string) (temp___is_init_99 : bool) (temp___skip_constant_100 : bool) (temp___do_toplevel_101 : bool) (temp___do_typ_inv_102 : bool)  =
+  (if (temp___skip_constant_100) then (
+   true) else (
+   (Standard__wide_string.dynamic_property Standard__positive.first Standard__positive.last (Standard__wide_string.first temp___expr_103) (Standard__wide_string.last temp___expr_103))))
+
+end
+
+(* Module giving axioms for type "wide_wide_string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_wide_string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__positive
+ use        Standard__wide_wide_string
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_110 : Standard__wide_wide_string.wide_wide_string) (temp___is_init_106 : bool) (temp___skip_constant_107 : bool) (temp___do_toplevel_108 : bool) (temp___do_typ_inv_109 : bool)  =
+  (if (temp___skip_constant_107) then (
+   true) else (
+   (Standard__wide_wide_string.dynamic_property Standard__positive.first Standard__positive.last (Standard__wide_wide_string.first temp___expr_110) (Standard__wide_wide_string.last temp___expr_110))))
+
+end
+
+(* Module giving axioms for type "duration", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__duration___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__duration
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_116 : Standard__duration.duration) (temp___is_init_112 : bool) (temp___skip_constant_113 : bool) (temp___do_toplevel_114 : bool) (temp___do_typ_inv_115 : bool)  =
+  true
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_117 : Standard__duration.duration) (temp___skip_top_level_118 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_8", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_8___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_8
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_123 : int) (temp___is_init_119 : bool) (temp___skip_constant_120 : bool) (temp___do_toplevel_121 : bool) (temp___do_typ_inv_122 : bool)  =
+  (if (( temp___is_init_119 \/ (Standard__integer_8.first <= Standard__integer_8.last) )) then (
+   (Standard__integer_8.dynamic_property Standard__integer_8.first Standard__integer_8.last temp___expr_123)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_124 : int) (temp___skip_top_level_125 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_16", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_16___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_16
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_130 : int) (temp___is_init_126 : bool) (temp___skip_constant_127 : bool) (temp___do_toplevel_128 : bool) (temp___do_typ_inv_129 : bool)  =
+  (if (( temp___is_init_126 \/ (Standard__integer_16.first <= Standard__integer_16.last) )) then (
+   (Standard__integer_16.dynamic_property Standard__integer_16.first Standard__integer_16.last temp___expr_130)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_131 : int) (temp___skip_top_level_132 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_32", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_32___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_32
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_137 : int) (temp___is_init_133 : bool) (temp___skip_constant_134 : bool) (temp___do_toplevel_135 : bool) (temp___do_typ_inv_136 : bool)  =
+  (if (( temp___is_init_133 \/ (Standard__integer_32.first <= Standard__integer_32.last) )) then (
+   (Standard__integer_32.dynamic_property Standard__integer_32.first Standard__integer_32.last temp___expr_137)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_138 : int) (temp___skip_top_level_139 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_64", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_64___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_64
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_144 : int) (temp___is_init_140 : bool) (temp___skip_constant_141 : bool) (temp___do_toplevel_142 : bool) (temp___do_typ_inv_143 : bool)  =
+  (if (( temp___is_init_140 \/ (Standard__integer_64.first <= Standard__integer_64.last) )) then (
+   (Standard__integer_64.dynamic_property Standard__integer_64.first Standard__integer_64.last temp___expr_144)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_145 : int) (temp___skip_top_level_146 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "universal_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__universal_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__universal_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_151 : int) (temp___is_init_147 : bool) (temp___skip_constant_148 : bool) (temp___do_toplevel_149 : bool) (temp___do_typ_inv_150 : bool)  =
+  (if (( temp___is_init_147 \/ (Standard__universal_integer.first <= Standard__universal_integer.last) )) then (
+   (Standard__universal_integer.dynamic_property Standard__universal_integer.first Standard__universal_integer.last temp___expr_151)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_152 : int) (temp___skip_top_level_153 : bool)  =
+  true
+
+end
+
+(* Module for defining the loop exit exception for the loop "L_1" defined at max2.adb:8, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+module Max2__findmax2__L_1
+ use import "_gnatprove_standard".Main
+
+ exception L_1
+
+end
+
+(* Module giving an empty axiom for the entity "L_1" defined at max2.adb:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Max2__findmax2__L_1___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "vector" defined at max2.ads:3, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__vector___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__integer
+ use        Max2__vector
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_159 : Max2__vector.vector) (temp___is_init_155 : bool) (temp___skip_constant_156 : bool) (temp___do_toplevel_157 : bool) (temp___do_typ_inv_158 : bool)  =
+  (if (temp___skip_constant_156) then (
+   true) else (
+   (Max2__vector.dynamic_property Standard__integer.first Standard__integer.last (Max2__vector.first temp___expr_159) (Max2__vector.last temp___expr_159))))
+
+end
+
+(* Module giving axioms for type "T6s" defined at max2.ads:9, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L5s__T6s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T8s" defined at max2.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L7s__T8s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T10s" defined at max2.ads:14, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L7s__L9s__T10s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T12s" defined at max2.ads:16, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L11s__T12s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T14s" defined at max2.ads:18, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L11s__L13s__T14s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "TS1bP1" defined at max2.adb:3, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__TS1bP1___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "S1b" defined at max2.adb:3, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__S1b___axiom
+ use import "_gnatprove_standard".Main
+ use        Max2__vector
+ use        Max2__findmax2__v
+ use        Max2__findmax2__S1b
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_167 : Max2__findmax2__S1b.s1b) (temp___is_init_163 : bool) (temp___skip_constant_164 : bool) (temp___do_toplevel_165 : bool) (temp___do_typ_inv_166 : bool)  =
+  (if (temp___skip_constant_164) then (
+   true) else (
+   ( (Max2__findmax2__S1b.dynamic_property (Max2__vector.first Max2__findmax2__v.v) (Max2__vector.last Max2__findmax2__v.v) (Max2__findmax2__S1b.first temp___expr_167) (Max2__findmax2__S1b.last temp___expr_167)) /\ ( ((Max2__findmax2__S1b.first temp___expr_167) = (Max2__vector.first Max2__findmax2__v.v)) /\ ((Max2__findmax2__S1b.last temp___expr_167) = (Max2__vector.last Max2__findmax2__v.v)) ) )))
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_169 : Max2__findmax2__S1b.s1b) (temp___skip_top_level_170 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "T2b" defined at max2.adb:8, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__T2b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T6b" defined at max2.adb:22, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L5b__T6b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T4b" defined at max2.adb:22, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L3b__T4b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T10b" defined at max2.adb:24, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L9b__T10b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T8b" defined at max2.adb:24, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L7b__T8b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T20b" defined at max2.adb:29, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L19b__T20b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T12b" defined at max2.adb:29, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L11b__T12b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T22b" defined at max2.adb:30, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L21b__T22b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T14b" defined at max2.adb:30, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L13b__T14b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T24b" defined at max2.adb:30, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L21b__L23b__T24b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T16b" defined at max2.adb:30, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L13b__L15b__T16b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T26b" defined at max2.adb:31, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L25b__T26b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T18b" defined at max2.adb:31, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Max2__findmax2__L_1__L17b__T18b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+(* Module for declaring a program function (and possibly an axiom) for "findmax2" defined at max2.ads:5, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Max2__findmax2___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer___axiom
+ use        Standard__positive
+ use        Standard__positive__rep
+ use        Max2__findmax2
+ use        Array__Int__Standard__positive
+ use        Max2__vector
+ use        Max2__vector___axiom
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+
+ val findmax2 
+   (v : Max2__vector.vector) : int
+  requires {  ( ((Max2__vector.first v) < 2147483647) /\ ((Max2__vector.length v) > 0) ) }
+  ensures {  ( ( (result = (Max2__findmax2.findmax2 v)) /\ (Max2__findmax2.findmax2__function_guard result v) ) /\ ( (Standard__integer___axiom.dynamic_invariant result True False True True) /\ ( ( (result >= 0) /\ ( (result = 0) \/ (exists i  : int.
+   ( ( ((Max2__vector.first v) <= i) /\ (i <= (Max2__vector.last v)) ) /\ (result = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) i))) )) ) ) /\ (if ((result = 0)) then (
+   (forall i   "model" "name:I" "model_trace:2645"  : int.
+    ( ( ((Max2__vector.first v) <= i) /\ (i <= (Max2__vector.last v)) ) -> (forall j   "model" "model_trace:2656" "name:J"  : int.
+     ( ( ((Max2__vector.first v) <= j) /\ (j <= (Max2__vector.last v)) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) i)) = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) j))) )) ))) else (
+   (forall i   "model" "name:I" "model_trace:2674"  : int.
+    ( ( ((Max2__vector.first v) <= i) /\ (i <= (Max2__vector.last v)) ) -> (if (((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) i)) > result)) then (
+     (forall j   "model" "name:J" "model_trace:2692"  : int.
+      ( ( ((Max2__vector.first v) <= j) /\ (j <= (Max2__vector.last v)) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) j)) <= (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) i))) ))) else (
+     true)) )))) ) ) ) }
+ 
+ axiom findmax2__post_axiom :
+  (forall v   : Max2__vector.vector [(Max2__findmax2.findmax2 v)].
+   ( ( (Max2__vector___axiom.dynamic_invariant v True True True True) /\ ( ((Max2__vector.first v) < 2147483647) /\ ((Max2__vector.length v) > 0) ) ) -> (let result = (Max2__findmax2.findmax2 v) in (
+    (if ((Max2__findmax2.findmax2__function_guard result v)) then (
+     ( ( ( ( (result >= 0) /\ ( (result = 0) \/ (exists i  : int.
+      ( ( ((Max2__vector.first v) <= i) /\ (i <= (Max2__vector.last v)) ) /\ (result = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) i))) )) ) ) /\ (if ((result = 0)) then (
+      (forall i   "model" "name:I" "model_trace:2645"  : int.
+       ( ( ((Max2__vector.first v) <= i) /\ (i <= (Max2__vector.last v)) ) -> (forall j   "model" "model_trace:2656" "name:J"  : int.
+        ( ( ((Max2__vector.first v) <= j) /\ (j <= (Max2__vector.last v)) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) i)) = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) j))) )) ))) else (
+      (forall i   "model" "name:I" "model_trace:2674"  : int.
+       ( ( ((Max2__vector.first v) <= i) /\ (i <= (Max2__vector.last v)) ) -> (if (((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) i)) > result)) then (
+        (forall j   "model" "name:J" "model_trace:2692"  : int.
+         ( ( ((Max2__vector.first v) <= j) /\ (j <= (Max2__vector.last v)) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) j)) <= (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array v) i))) ))) else (
+        true)) )))) ) /\ (Standard__integer___axiom.dynamic_invariant result True False True True) ) /\ true )) else true)))
+    ))
+
+end
+
+(* Module for checking absence of run-time errors and package initial condition on package elaboration of "max2" defined at max2.ads:1, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
+module Max2__package_def
+ use import "_gnatprove_standard".Main
+
+ let def #"max2.ads" 1 0 0#"GP_Subp:max2.ads:1" "W:diverges:N" 
+   (__void_param : unit)
+  requires { #"max2.ads" 1 0 0# true }
+  ensures { #"max2.ads" 1 0 0# true }
+   =
+  ( (#"max2.ads" 1 0 0# ());
+  (#"max2.ads" 3 0 0# ());
+  (#"max2.ads" 5 0 0# ());
+  (#"max2.ads" 7 0 0# ());
+  (#"max2.ads" 6 0 0# ());
+  (#"max2.ads" 6 0 0# ());
+  (#"max2.ads" 6 0 0# ());
+  (#"max2.adb" 1 0 0# ());
+  (#"max2.adb" 3 0 0# ());
+  ( "GP_Sloc:max2.adb:38:1" (#"max2.adb" 38 0 0# ()) ) )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "findmax2" defined at max2.ads:5, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Max2__findmax2__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Standard__natural___axiom
+ use        Standard__positive
+ use        Standard__positive__rep
+ use        Array__Int__Standard__positive
+ use        Max2__vector
+ use        Max2__vector___axiom
+ use        Max2__findmax2__v
+ use        Max2__findmax2__max_found
+ use        Max2__findmax2__second_max_found
+ use        Max2__findmax2__L_1
+ use        Max2__findmax2__L_1__T2b
+ use        Max2__findmax2__L_1__i
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Array__Int__Standard__positive
+ use        Standard__integer___axiom
+ use        Standard__natural___axiom
+ use        Standard__positive___axiom
+ use        Standard__integer___axiom
+ use        Max2__findmax2__max_found___axiom
+ use        Max2__findmax2__second_max_found___axiom
+ use        Max2__findmax2__L_1__i___axiom
+ use        Max2__findmax2__L_1___axiom
+ use        Max2__vector___axiom
+ use        Max2__findmax2__v___axiom
+ use        Max2__findmax2__L_1__T2b___axiom
+
+ val max2__findmax2__result "model_projected" "model_trace:2569@result" "name:FindMax2"  : int__ref 
+ 
+ let def #"max2.ads" 5 0 0#"W:diverges:N" "GP_Subp:max2.ads:5" 
+   (__void_param : unit)
+  requires { #"max2.ads" 5 0 0# true }
+  ensures { #"max2.ads" 5 0 0# (#"max2.ads" 7 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:max2.ads:7:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:16" "comment:     Post => FindMax2'Result >= 0 and
+             ^ max2.ads:7:14:VC_POSTCONDITION" "GP_Shape:pragargs__and" ( ( ( "GP_Pretty_Ada:2612" "GP_Sloc:max2.ads:7:14" (max2__findmax2__result.int__content >= 0) ) /\ ( "GP_Pretty_Ada:2619" "GP_Sloc:max2.ads:8:6" ( (max2__findmax2__result.int__content = 0) \/ (exists i  : int.
+   ( ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) /\ (max2__findmax2__result.int__content = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i))) )) ) ) ) /\ (if ((max2__findmax2__result.int__content = 0)) then (
+   (forall i #"max2.ads" 7 0 0#  "model" "name:I" "model_trace:2645"  : int.
+    ( ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) -> (forall j #"max2.ads" 7 0 0#  "model" "model_trace:2656" "name:J"  : int.
+     ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) -> ( "GP_Pretty_Ada:2670" "GP_Sloc:max2.ads:14:39" ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i)) = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j))) ) )) ))) else (
+   (forall i #"max2.ads" 7 0 0#  "model" "name:I" "model_trace:2674"  : int.
+    ( ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) -> (if (((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i)) > max2__findmax2__result.int__content)) then (
+     (forall j #"max2.ads" 7 0 0#  "model" "name:J" "model_trace:2692"  : int.
+      ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) -> ( "GP_Pretty_Ada:2706" "GP_Sloc:max2.ads:18:42" ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) <= (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i))) ) ))) else (
+     ( "GP_Pretty_Ada:2980" "GP_Sloc:max2.ads:17:15" true ))) )))) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram max2.ads:5 *)
+  ;
+   assume {  (Max2__vector___axiom.dynamic_invariant Max2__findmax2__v.v True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram max2.ads:5 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram max2.ads:5 *)
+  ;
+   abstract ensures {true}(let _ = (Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+   ()))
+   end ;
+  (Max2__vector.first(Max2__findmax2__v.v)) ) < 2147483647)) (((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+   ()))
+   end ;
+  (Max2__vector.length(Max2__findmax2__v.v)) ) > 0))) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram max2.ads:5 *)
+  ;
+   assume {  ( ((Max2__vector.first Max2__findmax2__v.v) < 2147483647) /\ ((Max2__vector.length Max2__findmax2__v.v) > 0) ) };
+   try
+   ( (#"max2.adb" 3 0 0# ());
+   (#"max2.adb" 5 0 0# ( #"max2.adb" 5 0 0# Max2__findmax2__max_found.max_found.int__content <- ( 0 );
+   #"max2.adb" 5 0 0# assume { #"max2.adb" 5 0 0# (Standard__natural___axiom.dynamic_invariant Max2__findmax2__max_found.max_found.int__content True False True True) } ));
+   (#"max2.adb" 6 0 0# ( #"max2.adb" 6 0 0# Max2__findmax2__second_max_found.second_max_found.int__content <- ( 0 );
+   #"max2.adb" 6 0 0# assume { #"max2.adb" 6 0 0# (Standard__natural___axiom.dynamic_invariant Max2__findmax2__second_max_found.second_max_found.int__content True False True True) } ));
+   (#"max2.adb" 8 0 0# ());
+   ( "GP_Sloc:max2.adb:8:24" (#"max2.adb" 8 0 0# (let temp___173 = ( #"max2.adb" 8 0 0# abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+    ()))
+    end ;
+   (Max2__vector.first(Max2__findmax2__v.v)) ) in (
+   (let temp___174 = ( #"max2.adb" 8 0 0# abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+    ()))
+    end ;
+   (Max2__vector.last(Max2__findmax2__v.v)) ) in (
+    ( #"max2.adb" 8 0 0# Max2__findmax2__L_1__i.i.int__content <- ( temp___173 );
+    () (* Translation of an Ada loop from max2.adb:8 *)
+    ;
+    (if ((Boolean.andb((temp___173 <= Max2__findmax2__L_1__i.i.int__content)) ((Max2__findmax2__L_1__i.i.int__content <= temp___174)))) then (
+     #"max2.adb" 8 0 0# try
+      ( #"max2.adb" 8 0 0# abstract ensures {true}(let _ = Max2__findmax2__max_found.max_found.int__content in (
+       ()))
+       end ;
+      (let temp___177 = #"max2.adb" 8 0 0# (any int
+      ensures {#"max2.adb" 8 0 0# (result = Max2__findmax2__max_found.max_found.int__content)} 
+      ) in (
+       ( #"max2.adb" 8 0 0# abstract ensures {true}(let _ = Max2__findmax2__L_1__i.i.int__content in (
+        ()))
+        end ;
+       (let temp___176 = #"max2.adb" 8 0 0# (any int
+       ensures {#"max2.adb" 8 0 0# (result = Max2__findmax2__L_1__i.i.int__content)} 
+       ) in (
+        ( #"max2.adb" 8 0 0# abstract ensures {true}(let _ = Max2__findmax2__second_max_found.second_max_found.int__content in (
+         ()))
+         end ;
+        (let temp___175 = #"max2.adb" 8 0 0# (any int
+        ensures {#"max2.adb" 8 0 0# (result = Max2__findmax2__second_max_found.second_max_found.int__content)} 
+        ) in (
+         ( () (* First unroling of the loop statements appearing before the loop invariant of loop max2.adb:8 *)
+         ;
+         ( "GP_Sloc:max2.adb:10:20" (#"max2.adb" 10 0 0# ()) );
+         ( "GP_Sloc:max2.adb:10:10" (#"max2.adb" 10 0 0# (if (((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) > Max2__findmax2__max_found.max_found.int__content)) then (
+          ( ( "GP_Sloc:max2.adb:12:13" (#"max2.adb" 12 0 0# ()) );
+          ( "GP_Sloc:max2.adb:12:33" (#"max2.adb" 12 0 0# ()) );
+          ( "GP_Sloc:max2.adb:12:30" (#"max2.adb" 12 0 0# #"max2.adb" 12 0 0# Max2__findmax2__second_max_found.second_max_found.int__content <- ( Max2__findmax2__max_found.max_found.int__content )) );
+          ( "GP_Sloc:max2.adb:13:13" (#"max2.adb" 13 0 0# ()) );
+          ( "GP_Sloc:max2.adb:13:23" (#"max2.adb" 13 0 0# #"max2.adb" 13 0 0# Max2__findmax2__max_found.max_found.int__content <- ( (Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) )) ) )) else (
+          ( "GP_Sloc:max2.adb:14:10" (if ((Boolean.andb(((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) > Max2__findmax2__second_max_found.second_max_found.int__content)) (((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) < Max2__findmax2__max_found.max_found.int__content)))) then (
+           ( ( "GP_Sloc:max2.adb:17:13" (#"max2.adb" 17 0 0# ()) );
+           ( "GP_Sloc:max2.adb:17:30" (#"max2.adb" 17 0 0# #"max2.adb" 17 0 0# Max2__findmax2__second_max_found.second_max_found.int__content <- ( (Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) )) ) )) else (
+           ())) )))) );
+         () (* While loop translating the Ada loop from max2.adb:8 *)
+         ;
+          while True do
+          invariant { 
+           (#"max2.adb" 22 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:max2.adb:22:33" "GP_Reason:VC_LOOP_INVARIANT" "GP_Id:1" "comment:         pragma Loop_Invariant (for all J in V'First .. I => V(J) <= Max_Found);
+                                ^ max2.adb:22:33:VC_LOOP_INVARIANT" "GP_Shape:L_1_while__pragargs__forall" (forall j #"max2.adb" 22 0 0#  "model" "name:J" "model_trace:2396"  : int.
+            ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) -> ( "GP_Pretty_Ada:2413" "GP_Sloc:max2.adb:22:62" ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) <= Max2__findmax2__max_found.max_found.int__content) ) )) ))
+           }
+          invariant { 
+           (#"max2.adb" 24 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_LOOP_INVARIANT" "GP_Sloc:max2.adb:24:33" "GP_Id:3" "comment:         pragma Loop_Invariant (for some J in V'First .. I => V(J) = Max_Found);
+                                ^ max2.adb:24:33:VC_LOOP_INVARIANT" "GP_Shape:L_1_while__pragargs__forsome" (exists j  : int.
+            ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) /\ ( "GP_Pretty_Ada:2435" "GP_Sloc:max2.adb:24:63" ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) = Max2__findmax2__max_found.max_found.int__content) ) )) ))
+           }
+          invariant { 
+           (#"max2.adb" 29 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_LOOP_INVARIANT" "GP_Sloc:max2.adb:29:33" "GP_Id:9" "comment:         pragma Loop_Invariant (((for some J in V'First .. I => V(J) = Second_Max_Found) and
+                                ^ max2.adb:29:33:VC_LOOP_INVARIANT" "GP_Shape:L_1_while__pragargs__or" ( "GP_Pretty_Ada:2500" "GP_Sloc:max2.adb:29:33" ( ( (exists j  : int.
+            ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) /\ ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) = Max2__findmax2__second_max_found.second_max_found.int__content) )) /\ (forall j #"max2.adb" 29 0 0#  "model" "name:J" "model_trace:2460"  : int.
+            ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) -> (if (((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) > Max2__findmax2__second_max_found.second_max_found.int__content)) then (
+             (forall k #"max2.adb" 29 0 0#  "model" "model_trace:2479" "name:K"  : int.
+              ( ( ((Max2__vector.first Max2__findmax2__v.v) <= k) /\ (k <= Max2__findmax2__L_1__i.i.int__content) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) k)) <= (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j))) ))) else (
+             true)) )) ) \/ ( (Max2__findmax2__second_max_found.second_max_found.int__content = 0) /\ (forall j #"max2.adb" 29 0 0#  "model" "name:J" "model_trace:2506"  : int.
+            ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) = Max2__findmax2__max_found.max_found.int__content) )) ) ) ) ))
+           }
+          ( () (* Assume implicit invariants from the loop max2.adb:8 *)
+          ;
+           assume {  (Boolean.andb(( ( ( ( ( ( true /\ (Standard__natural___axiom.dynamic_invariant Max2__findmax2__second_max_found.second_max_found.int__content False True True True) ) /\ true ) /\ (if (((Max2__vector.first Max2__findmax2__v.v) <= (Max2__vector.last Max2__findmax2__v.v))) then (
+           (Max2__findmax2__L_1__T2b.dynamic_property (Max2__vector.first Max2__findmax2__v.v) (Max2__vector.last Max2__findmax2__v.v) Max2__findmax2__L_1__i.i.int__content)) else true) ) /\ true ) /\ (Standard__natural___axiom.dynamic_invariant Max2__findmax2__max_found.max_found.int__content False True True True) ) /\ true )) (( ((Max2__vector.first Max2__findmax2__v.v) <= Max2__findmax2__L_1__i.i.int__content) /\ (Max2__findmax2__L_1__i.i.int__content <= (Max2__vector.last Max2__findmax2__v.v)) ))) };
+          () (* Check for absence of RTE in the invariant of loop max2.adb:8 *)
+          ;
+           abstract ensures {true}(let _ = ( (let j =  (any int
+          ) in (
+           (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+            ()))
+            end ;
+           (Max2__vector.first(Max2__findmax2__v.v)) ) <= j)) ((j <= Max2__findmax2__L_1__i.i.int__content)))) then (
+             abstract ensures {true}(let _ = ((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.adb" 22 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:max2.adb:22:64" "GP_Reason:VC_INDEX_CHECK" "GP_Id:0" "comment:         pragma Loop_Invariant (for all J in V'First .. I => V(J) <= Max_Found);
+                                                               ^ max2.adb:22:64:VC_INDEX_CHECK" "GP_Shape:L_1_while__pragargs__forall__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+            j ))))) <= Max2__findmax2__max_found.max_found.int__content) in (
+             ()))
+             end ))))
+          ;
+           (any bool
+          requires { true} 
+          ensures { ( (result = True) <-> (forall j   "model" "name:J" "model_trace:2396"  : int.
+           ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) <= Max2__findmax2__max_found.max_found.int__content) )) )} 
+          ) ) in (
+           ()))
+           end ;
+           abstract ensures {true}(let _ = ( (let j =  (any int
+          ) in (
+           (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+            ()))
+            end ;
+           (Max2__vector.first(Max2__findmax2__v.v)) ) <= j)) ((j <= Max2__findmax2__L_1__i.i.int__content)))) then (
+             abstract ensures {true}(let _ = ((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.adb" 24 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.adb:24:65" "GP_Id:2" "comment:         pragma Loop_Invariant (for some J in V'First .. I => V(J) = Max_Found);
+                                                                ^ max2.adb:24:65:VC_INDEX_CHECK" "GP_Shape:L_1_while__pragargs__forsome__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+            j ))))) = Max2__findmax2__max_found.max_found.int__content) in (
+             ()))
+             end ))))
+          ;
+           (any bool
+          requires { true} 
+          ensures { ( (result = True) <-> (exists j  : int.
+           ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) /\ ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) = Max2__findmax2__max_found.max_found.int__content) )) )} 
+          ) ) in (
+           ()))
+           end ;
+           abstract ensures {true}(let _ = (Boolean.orb((Boolean.andb(( (let j =  (any int
+          ) in (
+           (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+            ()))
+            end ;
+           (Max2__vector.first(Max2__findmax2__v.v)) ) <= j)) ((j <= Max2__findmax2__L_1__i.i.int__content)))) then (
+             abstract ensures {true}(let _ = ((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.adb" 29 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.adb:29:67" "GP_Id:4" "comment:         pragma Loop_Invariant (((for some J in V'First .. I => V(J) = Second_Max_Found) and
+                                                                  ^ max2.adb:29:67:VC_INDEX_CHECK" "GP_Shape:L_1_while__pragargs__or__and__forsome__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+            j ))))) = Max2__findmax2__second_max_found.second_max_found.int__content) in (
+             ()))
+             end ))))
+          ;
+           (any bool
+          requires { true} 
+          ensures { ( (result = True) <-> (exists j  : int.
+           ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) /\ ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) = Max2__findmax2__second_max_found.second_max_found.int__content) )) )} 
+          ) )) (( (let j =  (any int
+          ) in (
+           (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+            ()))
+            end ;
+           (Max2__vector.first(Max2__findmax2__v.v)) ) <= j)) ((j <= Max2__findmax2__L_1__i.i.int__content)))) then (
+             abstract ensures {true}(let _ = (if (((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.adb" 30 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.adb:30:71" "GP_Id:7" "comment:                                  (for all J in V'First .. I => (if V(J) > Second_Max_Found then (for all K in V'First .. I => V(K) <= V(J)))))
+                                                                      ^ max2.adb:30:71:VC_INDEX_CHECK" "GP_Shape:L_1_while__pragargs__or__and__forall__if__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+            j ))))) > Max2__findmax2__second_max_found.second_max_found.int__content)) then (
+             ( (let k =  (any int
+             ) in (
+              (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+               ()))
+               end ;
+              (Max2__vector.first(Max2__findmax2__v.v)) ) <= k)) ((k <= Max2__findmax2__L_1__i.i.int__content)))) then (
+                abstract ensures {true}(let _ = ((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.adb" 30 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.adb:30:130" "GP_Id:5" "comment:                                  (for all J in V'First .. I => (if V(J) > Second_Max_Found then (for all K in V'First .. I => V(K) <= V(J)))))
+                                                                                                                                 ^ max2.adb:30:130:VC_INDEX_CHECK" "GP_Shape:L_1_while__pragargs__or__and__forall__if__forall__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= k) /\ (k <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+               k ))))) <= (Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.adb" 30 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Shape:L_1_while__pragargs__or__and__forall__if__forall__cmp__ixdcomp" "GP_Sloc:max2.adb:30:138" "GP_Id:6" "comment:                                  (for all J in V'First .. I => (if V(J) > Second_Max_Found then (for all K in V'First .. I => V(K) <= V(J)))))
+                                                                                                                                         ^ max2.adb:30:138:VC_INDEX_CHECK" ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+               j )))))) in (
+                ()))
+                end ))))
+             ;
+              (any bool
+             requires { true} 
+             ensures { ( (result = True) <-> (forall k   "model" "model_trace:2479" "name:K"  : int.
+              ( ( ((Max2__vector.first Max2__findmax2__v.v) <= k) /\ (k <= Max2__findmax2__L_1__i.i.int__content) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) k)) <= (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j))) )) )} 
+             ) )) else (
+             (Boolean.of_int(1)))) in (
+             ()))
+             end ))))
+          ;
+           (any bool
+          requires { true} 
+          ensures { ( (result = True) <-> (forall j   "model" "name:J" "model_trace:2460"  : int.
+           ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) -> (if (((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) > Max2__findmax2__second_max_found.second_max_found.int__content)) then (
+            (forall k   "model" "model_trace:2479" "name:K"  : int.
+             ( ( ((Max2__vector.first Max2__findmax2__v.v) <= k) /\ (k <= Max2__findmax2__L_1__i.i.int__content) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) k)) <= (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j))) ))) else (
+            true)) )) )} 
+          ) )))) ((Boolean.andb((Max2__findmax2__second_max_found.second_max_found.int__content = 0)) (( (let j =  (any int
+          ) in (
+           (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+            ()))
+            end ;
+           (Max2__vector.first(Max2__findmax2__v.v)) ) <= j)) ((j <= Max2__findmax2__L_1__i.i.int__content)))) then (
+             abstract ensures {true}(let _ = ((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.adb" 31 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.adb:31:94" "GP_Id:8" "comment:                                or (Second_Max_Found = 0 and (for all J in V'First .. I => V(J) = Max_Found))
+                                                                                             ^ max2.adb:31:94:VC_INDEX_CHECK" "GP_Shape:L_1_while__pragargs__or__and__forall__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+            j ))))) = Max2__findmax2__max_found.max_found.int__content) in (
+             ()))
+             end ))))
+          ;
+           (any bool
+          requires { true} 
+          ensures { ( (result = True) <-> (forall j   "model" "name:J" "model_trace:2506"  : int.
+           ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= Max2__findmax2__L_1__i.i.int__content) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) = Max2__findmax2__max_found.max_found.int__content) )) )} 
+          ) ))))) in (
+           ()))
+           end ;
+          () (* Loop statements appearing after the loop invariant of loop max2.adb:8 *)
+          ;
+          () (* Check for the exit condition and loop statements appearing before the loop invariant of loop max2.adb:8 *)
+          ;
+          (if ((Max2__findmax2__L_1__i.i.int__content = temp___174)) then (
+            raise Max2__findmax2__L_1.L_1));
+           Max2__findmax2__L_1__i.i.int__content <- ( (Max2__findmax2__L_1__i.i.int__content + 1) );
+          ( "GP_Sloc:max2.adb:10:20" (#"max2.adb" 10 0 0# ()) );
+          ( "GP_Sloc:max2.adb:10:10" (#"max2.adb" 10 0 0# (if (((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) > Max2__findmax2__max_found.max_found.int__content)) then (
+           ( ( "GP_Sloc:max2.adb:12:13" (#"max2.adb" 12 0 0# ()) );
+           ( "GP_Sloc:max2.adb:12:33" (#"max2.adb" 12 0 0# ()) );
+           ( "GP_Sloc:max2.adb:12:30" (#"max2.adb" 12 0 0# #"max2.adb" 12 0 0# Max2__findmax2__second_max_found.second_max_found.int__content <- ( Max2__findmax2__max_found.max_found.int__content )) );
+           ( "GP_Sloc:max2.adb:13:13" (#"max2.adb" 13 0 0# ()) );
+           ( "GP_Sloc:max2.adb:13:23" (#"max2.adb" 13 0 0# #"max2.adb" 13 0 0# Max2__findmax2__max_found.max_found.int__content <- ( (Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) )) ) )) else (
+           ( "GP_Sloc:max2.adb:14:10" (if ((Boolean.andb(((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) > Max2__findmax2__second_max_found.second_max_found.int__content)) (((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) < Max2__findmax2__max_found.max_found.int__content)))) then (
+            ( ( "GP_Sloc:max2.adb:17:13" (#"max2.adb" 17 0 0# ()) );
+            ( "GP_Sloc:max2.adb:17:30" (#"max2.adb" 17 0 0# #"max2.adb" 17 0 0# Max2__findmax2__second_max_found.second_max_found.int__content <- ( (Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) (Max2__findmax2__L_1__i.i.int__content)))) )) ) )) else (
+            ())) )))) ) )
+         done )))
+         )))
+        )))
+       )
+     with
+      Max2__findmax2__L_1.L_1 -> ()
+     end)) )))
+   ))
+   ) );
+   ( "GP_Sloc:max2.adb:35:14" (#"max2.adb" 35 0 0# ()) );
+   ( "GP_Sloc:max2.adb:35:7" (#"max2.adb" 35 0 0# ( #"max2.adb" 35 0 0# max2__findmax2__result.int__content <- ( Max2__findmax2__second_max_found.second_max_found.int__content );
+   #"max2.adb" 35 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Boolean.andb((Boolean.andb((max2__findmax2__result.int__content >= 0)) ((Boolean.orb((max2__findmax2__result.int__content = 0)) (( (let i =  (any int
+  ) in (
+   (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+    ()))
+    end ;
+   (Max2__vector.first(Max2__findmax2__v.v)) ) <= i)) ((i <= (  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+    ()))
+    end ;
+   (Max2__vector.last(Max2__findmax2__v.v)) ))))) then (
+     abstract ensures {true}(let _ = (max2__findmax2__result.int__content = (Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.ads" 9 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.ads:9:55" "GP_Id:10" "comment:        (for some I in V'Range => FindMax2'Result = V(I))) and
+                                                      ^ max2.ads:9:55:VC_INDEX_CHECK" "GP_Shape:pragargs__and__and__or__forsome__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+    i )))))) in (
+     ()))
+     end ))))
+  ;
+   (any bool
+  requires { true} 
+  ensures { ( (result = True) <-> (exists i  : int.
+   ( ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) /\ (max2__findmax2__result.int__content = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i))) )) )} 
+  ) )))))) ((if ((max2__findmax2__result.int__content = 0)) then (
+   ( (let i =  (any int
+   ) in (
+    (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+     ()))
+     end ;
+    (Max2__vector.first(Max2__findmax2__v.v)) ) <= i)) ((i <= (  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+     ()))
+     end ;
+    (Max2__vector.last(Max2__findmax2__v.v)) ))))) then (
+      abstract ensures {true}(let _ = ( (let j =  (any int
+     ) in (
+      (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+       ()))
+       end ;
+      (Max2__vector.first(Max2__findmax2__v.v)) ) <= j)) ((j <= (  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+       ()))
+       end ;
+      (Max2__vector.last(Max2__findmax2__v.v)) ))))) then (
+        abstract ensures {true}(let _ = ((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.ads" 14 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.ads:14:41" "GP_Id:11" "comment:             (for all J in V'Range => V(I) = V(J)))
+                                        ^ max2.ads:14:41:VC_INDEX_CHECK" "GP_Shape:pragargs__and__if__forall__forall__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+       i ))))) = (Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.ads" 14 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Shape:pragargs__and__if__forall__forall__cmp__ixdcomp" "GP_Sloc:max2.ads:14:48" "GP_Id:12" "comment:             (for all J in V'Range => V(I) = V(J)))
+                                               ^ max2.ads:14:48:VC_INDEX_CHECK" ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+       j )))))) in (
+        ()))
+        end ))))
+     ;
+      (any bool
+     requires { true} 
+     ensures { ( (result = True) <-> (forall j   "model" "model_trace:2656" "name:J"  : int.
+      ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i)) = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j))) )) )} 
+     ) ) in (
+      ()))
+      end ))))
+   ;
+    (any bool
+   requires { true} 
+   ensures { ( (result = True) <-> (forall i   "model" "name:I" "model_trace:2645"  : int.
+    ( ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) -> (forall j   "model" "model_trace:2656" "name:J"  : int.
+     ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i)) = (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j))) )) )) )} 
+   ) )) else (
+   ( (let i =  (any int
+   ) in (
+    (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+     ()))
+     end ;
+    (Max2__vector.first(Max2__findmax2__v.v)) ) <= i)) ((i <= (  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+     ()))
+     end ;
+    (Max2__vector.last(Max2__findmax2__v.v)) ))))) then (
+      abstract ensures {true}(let _ = (if (((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.ads" 17 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.ads:17:20" "GP_Id:15" "comment:             (if V(I) > FindMax2'Result then
+                   ^ max2.ads:17:20:VC_INDEX_CHECK" "GP_Shape:pragargs__and__if__forall__if__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+     i ))))) > max2__findmax2__result.int__content)) then (
+      ( (let j =  (any int
+      ) in (
+       (if ((Boolean.andb(((  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+        ()))
+        end ;
+       (Max2__vector.first(Max2__findmax2__v.v)) ) <= j)) ((j <= (  abstract ensures {true}(let _ = Max2__findmax2__v.v in (
+        ()))
+        end ;
+       (Max2__vector.last(Max2__findmax2__v.v)) ))))) then (
+         abstract ensures {true}(let _ = ((Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.ads" 18 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:max2.ads:18:44" "GP_Id:13" "comment:                (for all J in V'Range => V(J) <= V(I)))));
+                                           ^ max2.ads:18:44:VC_INDEX_CHECK" "GP_Shape:pragargs__and__if__forall__if__forall__cmp__ixdcomp" ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+        j ))))) <= (Standard__positive__rep.to_rep((Array__Int__Standard__positive.get((Max2__vector.to_array(Max2__findmax2__v.v))) ((  assert {  (#"max2.ads" 18 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Shape:pragargs__and__if__forall__if__forall__cmp__ixdcomp" "GP_Sloc:max2.ads:18:52" "GP_Id:14" "comment:                (for all J in V'Range => V(J) <= V(I)))));
+                                                   ^ max2.ads:18:52:VC_INDEX_CHECK" ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) )) };
+        i )))))) in (
+         ()))
+         end ))))
+      ;
+       (any bool
+      requires { true} 
+      ensures { ( (result = True) <-> (forall j   "model" "name:J" "model_trace:2692"  : int.
+       ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) <= (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i))) )) )} 
+      ) )) else (
+      (Boolean.of_int(1)))) in (
+      ()))
+      end ))))
+   ;
+    (any bool
+   requires { true} 
+   ensures { ( (result = True) <-> (forall i   "model" "name:I" "model_trace:2674"  : int.
+    ( ( ((Max2__vector.first Max2__findmax2__v.v) <= i) /\ (i <= (Max2__vector.last Max2__findmax2__v.v)) ) -> (if (((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i)) > max2__findmax2__result.int__content)) then (
+     (forall j   "model" "name:J" "model_trace:2692"  : int.
+      ( ( ((Max2__vector.first Max2__findmax2__v.v) <= j) /\ (j <= (Max2__vector.last Max2__findmax2__v.v)) ) -> ((Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) j)) <= (Standard__positive__rep.to_rep (Array__Int__Standard__positive.get (Max2__vector.to_array Max2__findmax2__v.v) i))) ))) else (
+     true)) )) )} 
+   ) ))))) in (
+   ()))
+   end ;
+  max2__findmax2__result.int__content )
+end

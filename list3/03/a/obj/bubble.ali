@@ -1,0 +1,46 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=core2
+A -mmacosx-version-min=10.14.5
+A -fPIC
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U bubble%b		bubble.adb		58ef4508 NE OO PK
+
+U bubble%s		bubble.ads		6a2306e2 EE NE OO PK
+
+D bubble.ads		20190430055201 6a2306e2 bubble%s
+D bubble.adb		20190430055201 32cc43ea bubble%b
+D system.ads		20180524051735 085b6ffb system%s
+X 1 bubble.ads
+1K9*Bubble 19l5 19e11 2|1b14 28l5 28t11
+2A9*Arr(integer)<integer> 4r25 10r26 16r31 2|2r31
+5i16 I{integer} 5r48 5r56
+8i39 I{integer} 8r71 8r79
+11i16 I{integer} 11r48
+14i40 I{integer} 14r72
+16U14*Sort 16=20 2|2b14 27l8 27t12
+16a20 A{2A9} 17r13 17r40 18r22 2|2b20 6r33 6r44 7r27 8r16 8r24 9r25 10m16
+. 10r25 11m16 14r80 14r91 14r99 15r45 15r48 16r50 16r86 16r106 16r114 19r58
+. 19r68 19r75 22r41 22r49 23r42 23r45
+X 2 bubble.adb
+4i7 Temp{integer} 9m16 11r29
+6l8 Outer 26l16 26e21
+6i20 I{integer} 7r38 16r61 16r97 19r49 22r44 23r56
+7l10 Inner 14r112 16r127 19r88 20l19 20e24
+7i22 J{integer} 8r19 8r26 9r28 10r19 10r28 11r19 14r50 14r55 15r59
+14i44 K1{integer} 14r93
+14i74 K2{integer} 14r119
+16i44 K1{integer} 16r108
+16i80 K2{integer} 16r134
+19i44 K{integer} 19r70 19r95
+

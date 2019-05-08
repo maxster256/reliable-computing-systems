@@ -1,0 +1,4 @@
+railway.ads:66:48: info: initialization of "Success" proved[#0]
+railway.ads:72:16: info: postcondition proved[#2]
+railway.ads:74:48: info: initialization of "Success" proved[#1]
+railway.ads:80:16: info: postcondition proved[#3]

@@ -1,0 +1,48 @@
+V "GNAT Lib v2018"
+M P W=b
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U main%b		main.adb		3e4360b1 OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W sqrt%b		sqrt.adb		sqrt.ali
+Z system%s		system.ads		system.ali
+
+D ada.ads		20180524051735 76789da1 ada%s
+D a-ioexce.ads		20180524051734 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20180524051735 119b8fb3 ada.streams%s
+D a-textio.ads		20180524051736 881db35a ada.text_io%s
+D interfac.ads		20180524051734 5ab55268 interfaces%s
+D i-cstrea.ads		20180524051734 e53d8b8e interfaces.c_streams%s
+D main.adb		20190430100309 50fa27b1 main%b
+D sqrt.adb		20190507090614 e6a4f45a sqrt%b
+D system.ads		20180524051735 085b6ffb system%s
+D s-crtl.ads		20180524051734 0ebbdb71 system.crtl%s
+D s-ficobl.ads		20180524051736 078245e4 system.file_control_block%s
+D s-parame.ads		20180524051736 48ec542b system.parameters%s
+D s-wchcon.ads		20180524051736 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 7|1r6 1r23
+X 4 a-textio.ads
+49K13*Text_IO 471e16 7|1w10 1r27
+263U14*Put_Line 7|7s4
+X 7 main.adb
+4U11*Main 4b11 8l5 8t9
+X 8 sqrt.adb
+1V10*Sqrt{float} 7|2w6 7s14
+
+QQ SPARKVERSION 2018 (20180523)
+GG EK_DIRECT_CALLS main 0
+GG EK_GLOBALS main local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 2 ada__text_io__put_line__2 sqrt local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

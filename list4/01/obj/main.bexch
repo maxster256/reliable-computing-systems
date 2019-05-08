@@ -1,0 +1,18 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/Users/pawelnarolski/Desktop/Studia/04/01/l04e01.gpr
+20190430055201
+[BOUND OBJECT FILES]
+/Users/pawelnarolski/Desktop/Studia/04/01/obj/railway.o
+/Users/pawelnarolski/Desktop/Studia/04/01/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/Users/pawelnarolski/Desktop/Studia/04/01/obj/
+-L/Users/pawelnarolski/Desktop/Studia/04/01/obj/
+-L/applications/gnat/lib/gcc/x86_64-apple-darwin16.7.0/7.3.1/adalib/
+-static
+/applications/gnat/lib/gcc/x86_64-apple-darwin16.7.0/7.3.1/adalib/libgnat.a

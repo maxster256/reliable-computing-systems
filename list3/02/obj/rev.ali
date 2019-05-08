@@ -1,0 +1,27 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=core2
+A -mmacosx-version-min=10.14.5
+A -fPIC
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rev%b			rev.adb			b7e513a9 NE OO SU
+
+D rev.adb		20190430064945 b7e513a9 rev%b
+D system.ads		20180524051735 085b6ffb system%s
+X 1 rev.adb
+1U11*Rev 1b11 1=16 16l5 16t8
+1a16 S{string} 3r10 3r42 4r25 4r36 4r43 4r49 4r59 6r32 6r44 8r13 10m7 10r35
+. 10r48 14r43 14r59 14r85 14r98
+4i20 I{integer} 4r38 4r68
+6a4 Unreversed_String{string} 10r16 14r66
+8i8 I{integer} 10r10 10r44 14r54
+14i38 J{integer} 14r61 14r94
+

@@ -1,0 +1,27 @@
+Summary of SPARK analysis
+=========================
+
+-------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total       Flow   Interval   CodePeer     Provers   Justified   Unproved
+-------------------------------------------------------------------------------------------------------
+Data Dependencies                 .          .          .          .           .           .          .
+Flow Dependencies                 .          .          .          .           .           .          .
+Initialization                    2          2          .          .           .           .          .
+Non-Aliasing                      .          .          .          .           .           .          .
+Run-time Checks                   .          .          .          .           .           .          .
+Assertions                        .          .          .          .           .           .          .
+Functional Contracts              2          .          .          .    2 (CVC4)           .          .
+LSP Verification                  .          .          .          .           .           .          .
+-------------------------------------------------------------------------------------------------------
+Total                             4    2 (50%)          .          .     2 (50%)           .          .
+
+
+Analyzed 2 units
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:4 skipped
+in unit railway, 5 subprograms and packages out of 5 analyzed
+  Railway at railway.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Railway.Correct_Segments at railway.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Railway.Correct_Signals at railway.ads:38 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Railway.Move_Train at railway.ads:74 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Railway.Open_Route at railway.ads:66 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)

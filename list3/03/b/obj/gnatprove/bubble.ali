@@ -1,0 +1,61 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U bubble%b		bubble.adb		dc52b3ba OO PK
+
+U bubble%s		bubble.ads		70065fe8 OO PK
+
+D bubble.ads		20190430055201 70065fe8 bubble%s
+D bubble.adb		20190430055201 ac54ec52 bubble%b
+D system.ads		20180524051735 085b6ffb system%s
+X 1 bubble.ads
+1K9*Bubble 19l5 19e11 2|1b14 28l5 28t11
+2A9*Arr(integer)<integer> 4r25 10r26 16r31 2|2r31
+4V13*Sorted{boolean} 4>21 8r14
+4a21 A{2A9} 5r21 5r32 5r46 5r54 7r13 8r44 8r55 8r69 8r77
+5i16 I{integer} 5r48 5r56
+8i39 I{integer} 8r71 8r79
+10V13*Bubbled{boolean} 10>22 14r14
+10a22 A{2A9} 11r21 11r32 11r46 11r54 11r56 13r13 14r45 14r56 14r70 14r78
+. 14r80
+11i16 I{integer} 11r48
+14i40 I{integer} 14r72
+16U14*Sort 16=20 2|2b14 27l8 27t12
+16a20 A{2A9} 17r13 17r40 18r28 18r54 18r65 18r72 2|2b20 6r33 6r44 7r27 8r16
+. 8r24 9r25 10m16 10r25 11m16 17r50 17r77 17r88 17r96 24r47 24r74 24r85 24r93
+18i23 I{integer} 18r67
+18i49 J{integer} 18r78
+X 2 bubble.adb
+4i7 Temp{integer} 9m16 11r29
+6l8 Outer 24r106 26l16 26e21
+6i20 I{integer} 7r38
+7l10 Inner 17r109 20l19 20e24
+7i22 J{integer} 8r19 8r26 9r28 10r19 10r28 11r19
+17i44 K1{integer} 17r90
+17i71 K2{integer} 17r116
+24i41 K1{integer} 24r87
+24i68 K2{integer} 24r113
+
+QQ SPARKVERSION 2018 (20180523)
+GG EK_DIRECT_CALLS bubble__sorted 0
+GG EK_GLOBALS bubble__sorted local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS bubble__bubbled 0
+GG EK_GLOBALS bubble__bubbled local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS bubble__sort 0
+GG EK_GLOBALS bubble__sort local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS bubble 0
+GG EK_GLOBALS bubble local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

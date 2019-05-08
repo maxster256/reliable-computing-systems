@@ -1,0 +1,23 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=core2
+A -mmacosx-version-min=10.14.5
+A -fPIC
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U sqrt%b		sqrt.adb		e6a4f45a NE OO SU
+
+D sqrt.adb		20190430100354 e6a4f45a sqrt%b
+D system.ads		20180524051735 085b6ffb system%s
+X 1 sqrt.adb
+1V10*Sqrt{float} 1b10 1>16 1>27 15t7
+1f16 X{float} 3r24 6r18 6r37 7r30 9r36 9r60 10r36 10r77
+1f27 Tolerance{float} 6r41
+3f7 result{float} 6r22 7m10 7r21 7r32 9r50 9r66 10r50 10r68 13r14
+

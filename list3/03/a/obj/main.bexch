@@ -1,0 +1,18 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/Users/pawelnarolski/Desktop/Studia/Niezawodne systemy informatyczne/Reliable-Systems/03/03/a/list3_ex3a.gpr
+20190430065056
+[BOUND OBJECT FILES]
+/Users/pawelnarolski/Desktop/Studia/Niezawodne systemy informatyczne/Reliable-Systems/03/03/a/obj/bubble.o
+/Users/pawelnarolski/Desktop/Studia/Niezawodne systemy informatyczne/Reliable-Systems/03/03/a/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/Users/pawelnarolski/Desktop/Studia/Niezawodne systemy informatyczne/Reliable-Systems/03/03/a/obj/
+-L/Users/pawelnarolski/Desktop/Studia/Niezawodne systemy informatyczne/Reliable-Systems/03/03/a/obj/
+-L/applications/gnat/lib/gcc/x86_64-apple-darwin16.7.0/7.3.1/adalib/
+-static
+/applications/gnat/lib/gcc/x86_64-apple-darwin16.7.0/7.3.1/adalib/libgnat.a
